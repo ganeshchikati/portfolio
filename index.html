@@ -30,7 +30,6 @@
       padding:32px;
     }
 
-    /* Layout container */
     .container{max-width:1100px;margin:0 auto}
 
     header{
@@ -57,33 +56,26 @@
 
     .card{background:var(--card);padding:18px;border-radius:12px}
 
-    /* About/Skills/Projects grid */
     .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
 
     .about h2,.skills h2,.projects h2{margin-top:0}
     .bio{color:var(--muted)}
 
-    /* Skills */
     .skill{margin-bottom:12px}
     .skill .meta{display:flex;justify-content:space-between;font-size:0.9rem;color:var(--muted);margin-bottom:6px}
     .bar{height:10px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden}
     .bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#8bd5ff);width:0%;transition:width 800ms cubic-bezier(.2,.9,.3,1)}
-
-    /* Projects */
     .projects-list{display:grid;gap:12px}
     .project{display:flex;gap:12px;align-items:center}
     .proj-thumb{width:72px;height:48px;border-radius:8px;background:linear-gradient(135deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));display:grid;place-items:center;font-weight:700;color:var(--muted);font-size:0.9rem}
     .proj-info a{color:var(--accent);font-weight:700;text-decoration:none}
     .proj-info p{margin:4px 0 0;color:var(--muted);font-size:0.9rem}
-
-    /* Contact */
     form{display:grid;gap:10px}
     input,textarea{background:var(--glass);border:none;padding:10px;border-radius:8px;color:inherit}
     label{font-size:0.9rem;color:var(--muted)}
 
     footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
 
-    /* Responsive */
     @media (max-width:900px){
       .hero{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr}
@@ -207,18 +199,15 @@
     </main>
 
     <footer>
-      <p>Made with ❤️ — Replace with your name. • <span style="color:var(--muted)">Last updated: Aug 30, 2025</span></p>
-      <p style="margin-top:6px;">Want this as a GitHub Pages site? Push to a repo and enable Pages in the repo settings.</p>
+      <p>Made with ❤️ — ganeshchikati.</p>
     </footer>
   </div>
 
   <script>
-    // Animate skill bars on load
     document.addEventListener('DOMContentLoaded',()=>{
       document.querySelectorAll('.bar').forEach(bar=>{
         const pct = bar.getAttribute('data-pct') || '60';
         const inner = bar.querySelector('span');
-        // small timeout so transition is visible
         setTimeout(()=> inner.style.width = pct + '%', 120);
       });
     });
